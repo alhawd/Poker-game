@@ -149,35 +149,54 @@ public class Poker {
 				System.out.print("White wins - ");
 				break;
 			}
-			if(i == 5)System.out.print("Tie");
+			if(i == 5) {
+				System.out.print("Tie");
+				System.exit(0);
+			}
 	}
 		switch(blk[0] >= wht[0] ? blk[0]:wht[0]) {
 		case 1:
 			System.out.print("high card:");
+			int more = blk[1] >= wht[1] ? blk[1]:wht[1];
+			if(more < 9)System.out.print(more+2);
+			switch(more) {
+			case 9:
+				System.out.print("Jack");
+				break;
+			case 10:
+				System.out.print("Queen");
+				break;
+			case 11:
+				System.out.print("King");
+				break;
+			case 12:
+				System.out.print("Ace");
+				break;				
+			}
 			break;
 		case 2:
-			System.out.print("one pair:");
+			System.out.print("one pair");
 			break;
 		case 3:
-			System.out.print("two pair:");
+			System.out.print("two pair");
 			break;
 		case 4:
-			System.out.print("three of a kind:");
+			System.out.print("three of a kind");
 			break;
 		case 5:
-			System.out.print("straight:");
+			System.out.print("straight");
 			break;
 		case 6:
-			System.out.print("flush:");
+			System.out.print("flush");
 			break;
 		case 7:
-			System.out.print("full house:");
+			System.out.print("full house");
 			break;
 		case 8:
-			System.out.print("four of a kind:");
+			System.out.print("four of a kind");
 			break;
 		case 9:
-			System.out.print("straight flush:");
+			System.out.print("straight flush");
 			break;
 		}
 	}

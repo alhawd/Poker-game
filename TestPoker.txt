@@ -50,5 +50,11 @@ class PokerTest {
 		int[] i = {9,10,0,0,0,0};
 		assertArrayEquals(i,Poker.rank("JD","TD","8D","9D","QD"));		
 	}
-
+	@Test
+	void testWrongInput(){
+		int[] i = {0,0,0,0,0,0};
+		assertArrayEquals(i,Poker.rank("J4D","TD","8D","9D","QD"));	
+		assertArrayEquals(i,Poker.rank("BD","TD","8D","9D","QD"));
+		assertArrayEquals(i,Poker.rank("8D","TD","8D","9D","QA"));
+	}
 }
